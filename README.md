@@ -16,11 +16,65 @@ A modern, minimal, single-page static website for MCR Solutions - Smart Digital 
 ```
 mcr-solutions/
 │
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet with all styling
-├── script.js           # JavaScript for interactions
-└── README.md           # This file
+├── index.html                  # Main homepage
+├── privacy.html                # Privacy policies directory page
+├── privacy-poultry360.html     # Poultry 360 privacy policy
+├── style.css                   # Stylesheet with all styling
+├── script.js                   # JavaScript for interactions
+└── README.md                   # This file
 ```
+
+## 🔒 Privacy Policy System
+
+The website includes a **scalable privacy policy system** designed for multiple apps:
+
+### Structure
+1. **privacy.html** - Central directory page listing all app privacy policies
+2. **privacy-[appname].html** - Individual privacy policy for each app
+
+### Adding New App Privacy Policies
+
+When you launch a new app, follow these steps:
+
+**Step 1:** Create a new privacy policy file named `privacy-[yourappname].html`
+- Copy `privacy-poultry360.html` as a template
+- Update the app name, icon, and specific content
+- Keep the same structure and styling
+
+**Step 2:** Add a card to `privacy.html`
+- Duplicate an existing policy card
+- Update the icon, title, description, and link
+- Change the href to point to your new privacy file
+
+**Step 3:** Upload to GitHub
+- Add the new file to your repository
+- Commit and push changes
+- The new privacy policy will be live at: `https://mcrs.in/privacy-[yourappname].html`
+
+### Example: Adding "Crop Manager" App Privacy Policy
+
+1. Create `privacy-cropmanager.html`
+2. In `privacy.html`, add:
+```html
+<a href="privacy-cropmanager.html" class="policy-card">
+    <div class="policy-icon">🌾</div>
+    <div class="policy-app">Mobile App</div>
+    <h3 class="policy-title">Crop Manager</h3>
+    <p class="policy-description">
+        Privacy policy for Crop Manager app...
+    </p>
+    <div class="policy-meta">
+        <span>Updated: [Date]</span>
+        <span class="view-link">View Policy</span>
+    </div>
+</a>
+```
+
+This system allows you to:
+- ✅ Maintain separate privacy policies for each app
+- ✅ Comply with Google Play Store requirements
+- ✅ Keep policies organized and easy to find
+- ✅ Scale effortlessly as you add more apps
 
 ## 🎨 Design Philosophy
 
@@ -171,15 +225,21 @@ Edit the nav menu in `index.html`:
 - **Accessible** - Semantic HTML and ARIA labels
 - **Print Friendly** - Optimized print stylesheet
 
-## 📄 Sections Included
+## 📄 Pages Included
 
+### Main Website (index.html)
 1. **Hero** - Eye-catching introduction with CTA
 2. **About** - Company mission and values
 3. **Products** - Poultry 360 and future products
 4. **Future Products** - Upcoming solutions teaser
-5. **Privacy Policy** - Comprehensive privacy information
-6. **Contact** - Get in touch section with form
-7. **Footer** - Links and copyright
+5. **Contact** - Get in touch section with form
+6. **Footer** - Links and copyright
+
+### Privacy System
+1. **privacy.html** - Directory of all app privacy policies
+2. **privacy-poultry360.html** - Complete privacy policy for Poultry 360
+
+Each app gets its own dedicated privacy policy page, making it easy to comply with app store requirements and maintain clear, app-specific privacy information.
 
 ## 🐛 Troubleshooting
 
